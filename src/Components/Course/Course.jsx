@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { BsBook } from 'react-icons/bs';
-const Course = ({course}) => {
+const Course = ({course,handleAddToBookmark}) => {
     const {img,course_name,course_details,price,course_credit}=course;
     return (
         <div className='mb-4 mr-4 p-4 text-center w-[312px] h-[402px] shadow-2xl rounded-xl'>
@@ -13,7 +13,7 @@ const Course = ({course}) => {
             <span><BsBook></BsBook> </span>
             <p> Credit: {course_credit}</p>
             </div>
-            <button className='bg-blue-500 text-white p-3 rounded-xl mt-4 w-full'>Select</button>
+            <button onClick={()=>handleAddToBookmark(course)} className='bg-blue-500 text-white p-3 rounded-xl mt-4 w-full'>Select</button>
 
         </div>
     );

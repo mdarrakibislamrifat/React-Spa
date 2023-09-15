@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Course from '../Course/Course';
 
-const Courses = () => {
+const Courses = ({handleAddToBookmark}) => {
     const [courses,setCourses]=useState([])
     useEffect(()=>{
       fetch('data.json')
@@ -15,7 +16,7 @@ const Courses = () => {
         <div className='md:w-80% grid grid-cols-3 my-4'>
             
             {
-                courses.map(course=><Course key={course.id} course={course}></Course>)
+                courses.map(course=><Course key={course.id} course={course} handleAddToBookmark={handleAddToBookmark}></Course>)
             }
             
         </div>
