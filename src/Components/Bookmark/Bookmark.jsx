@@ -11,7 +11,7 @@ const Bookmark = ({bookmark}) => {
            
            <div>
            <ol>
-           <li key={bookmark.id} className='list-decimal'>{course_name}</li>
+           <li className='list-decimal'>{course_name}</li>
            </ol>
            </div>
            
