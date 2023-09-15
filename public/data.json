@@ -2,7 +2,7 @@
     {
       "id": 1,
       "img": "https://i.ibb.co/G55HR7t/Rectangle-2-2.png",
-      "course_name": "Introduction to C Programming",
+      "course_name": "C Programming",
       "course_details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       "price": 15000,
       "course_credit": 3

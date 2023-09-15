@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className='w-7xl mx-auto text-center mt-4'>
+        <div className='max-w-7xl mx-auto text-center mt-4 mb-4'>
             <h1 className='text-4xl font-bold'>Course Registration</h1>
         </div>
     );
