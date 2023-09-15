@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
+
 import { useState } from "react";
 import "./App.css";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Courses from "./Components/Courses/Courses";
 import Header from "./Components/Header/Header";
+
 
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
@@ -16,14 +18,24 @@ function App() {
 
     let count = course.course_credit;
     if (existItem) {
-      alert("Already Exist");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'This course is already in your course name!',
+  
+      })
     } else {
       bookmarks.forEach((item) => {
         count += item.course_credit;
       });
       const creditRemaining=20-count;
       if(count>20){
-        alert('Taka Sesh');
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Total Credit hour limit exit!',
+    
+        })
       }else{
         setCreditRemaining(creditRemaining)
 
