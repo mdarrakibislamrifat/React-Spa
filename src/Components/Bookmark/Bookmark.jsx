@@ -9,9 +9,11 @@ const Bookmark = ({bookmark}) => {
         <div className='shadow-2xl rounded-xl ml-10'>
             
            
+           <div>
            <ol>
            <li key={bookmark.id} className='list-decimal'>{course_name}</li>
            </ol>
+           </div>
            
             
         </div>

@@ -21,7 +21,7 @@ function App() {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'This course is already in your course name!',
+        text: 'This course is already enrolled!',
   
       })
     } else {
