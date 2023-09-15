@@ -6,8 +6,11 @@ import Header from "./Components/Header/Header";
 
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
-  const handleAddToBookmark = (course) => {
+  const [creditHour, setCreditHour] = useState(0);
+  
+  const handleAddToBookmark = (course,time) => {
     const newCourse = [...bookmarks, course];
+    setCreditHour(creditHour+time)
     setBookmarks(newCourse);
   };
   return (
@@ -16,7 +19,7 @@ function App() {
 
       <div className="md:flex max-w-7xl mx-auto">
         <Courses handleAddToBookmark={handleAddToBookmark}></Courses>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+        <Bookmarks creditHour={creditHour} bookmarks={bookmarks}></Bookmarks>
       </div>
     </>
   );

@@ -6,10 +6,14 @@ const Bookmark = ({bookmark}) => {
     const {course_name}=bookmark;
     return (
         
-        <div className='shadow-2xl rounded-xl'>
-            <ol >
-            <li >{course_name}</li>
-            </ol>
+        <div className='shadow-2xl rounded-xl ml-10'>
+            
+           
+           <ol>
+           <li key={bookmark.id} className='list-decimal'>{course_name}</li>
+           </ol>
+           
+            
         </div>
     );
 };
